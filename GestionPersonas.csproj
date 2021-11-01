@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UI\Consultas\**" />
+    <EmbeddedResource Remove="UI\Consultas\**" />
+    <None Remove="UI\Consultas\**" />
+    <Page Remove="UI\Consultas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\agregar.png" />
+    <None Remove="Resources\Eliminar.png" />
     <None Remove="Resources\icons8-eliminar-16.png" />
     <None Remove="Resources\icons8-google-web-search-24.png" />
     <None Remove="Resources\icons8-guardar-48.png" />
@@ -14,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\agregar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eliminar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\icons8-eliminar-16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -30,12 +45,11 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="UI\Consultas\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="5.0.10" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
